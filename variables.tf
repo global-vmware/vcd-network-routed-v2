@@ -22,17 +22,17 @@ variable "vcd_network_routed_segment01_segment_name" {
 
 variable "vcd_network_routed_segment01_segment_gateway" {
   description = "Gateway IP address for the Segment01 routed network"
-  default = "192.168.50.1"
+  default = "192.168.0.1"
 }
 
 variable "vcd_network_routed_segment01_start_address" {
   description = "Start IP address of the static IP pool for the Segment01 network"
-  default = "192.168.50.51"
+  default = "192.168.0.51"
 }
 
 variable "vcd_network_routed_segment01_end_address" {
   description = "End IP address of the static IP pool for the Segment01 network"
-  default = "192.168.50.100"
+  default = "192.168.0.100"
 }
 
 variable "vcd_network_routed_segment01_dns1_server_address" {
