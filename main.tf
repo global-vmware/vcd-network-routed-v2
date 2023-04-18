@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    vcd = {
+      source = "vmware/vcd"
+      version = "3.8.2"
+    }
+  }
+}
+
 # Create the Datacenter Group data source
 data "vcd_vdc_group" "dcgroup" {
   name = var.vdc_group_name
