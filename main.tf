@@ -5,7 +5,7 @@ terraform {
       version = "3.8.2"
     }
   }
-  required_version = "3.8.2"
+  required_version = "1.2.6"
 }
 
 # Create the Datacenter Group data source
