@@ -26,9 +26,10 @@ This Terraform module creates a segment routed network in an existing VMware Clo
 | static_ip_pool_id | The ID of the static IP address pool |
 | dns_server_ids | The IDs of the DNS servers |
 | dns_search_suffix | The DNS search suffix |
-Example Usage
-terraform
-Copy code
+
+## Example Usage
+<pre>
+```terraform
 module "segment_network" {
   source = "./modules/segment-network"
 
@@ -48,3 +49,5 @@ module "segment_network" {
   dns2_address = ""
   dns_suffix = "segment01.local"
 }
+```
+</pre>
