@@ -9,6 +9,13 @@ terraform {
   }
 }
 
+# Create the NSX-T Edge Gateway data source
+data "vcd_nsxt_edgegateway" "t1" {
+  org      = var.vdc_org_name
+  owner_id = data.vcd_vdc_group.rsvc-demoenvironment-dcgroup.id
+  name     = var.vdc_edge_name
+}
+
 #########################
 # Org VDC Routed Network
 ######################### 
