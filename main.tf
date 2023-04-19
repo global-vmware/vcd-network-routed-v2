@@ -25,7 +25,7 @@ data "vcd_nsxt_edgegateway" "t1" {
 # Org VDC Routed Network
 ######################### 
 
-resource "vcd_network_routed_v2" "segment" {
+resource "vcd_network_routed_v2" "org-vdc-routed-network" {
   org             = var.vdc_org_name
   name            = var.segment_name
   edge_gateway_id = data.vcd_nsxt_edgegateway.t1.id
