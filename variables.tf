@@ -1,7 +1,7 @@
 variable "vdc_group_name" {
   description = "Cloud Director Datacenter Group Name"
   type = string
-  default = ""
+  default = null
 }
 
 variable "vdc_org_name" {
