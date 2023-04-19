@@ -1,4 +1,4 @@
-Terraform Network Module
+## Terraform Network Module
 This Terraform module creates a segment routed network in an existing VMware Cloud on AWS (VMC) Software Defined Data Center (SDDC).
 
 ## Inputs
@@ -29,7 +29,7 @@ This Terraform module creates a segment routed network in an existing VMware Clo
 
 ## Example Usage
 <pre>
-```terraform
+```Terraform Code Example
 module "segment_network" {
   source = "./modules/segment-network"
 
