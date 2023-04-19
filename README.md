@@ -1,24 +1,31 @@
 Terraform Network Module
 This Terraform module creates a segment routed network in an existing VMware Cloud on AWS (VMC) Software Defined Data Center (SDDC).
 
-Inputs
-Name	Description	Type	Default	Required
-vdc_group_name	The name of the VMC SDDC VDC Group.	string		yes
-vdc_org_name	The name of the VMC SDDC Org.	string		yes
-vdc_edge_name	The name of the VMC SDDC Edge Gateway.	string		yes
-prefix_length	CIDR notation prefix length for the 24-bit network.	string	"24"	no
-segment_name	Name of the segment routed network.	string	"US-Segment-01"	no
-segment_gateway	Gateway IP address for the segment routed network.	string	"192.168.0.1"	no
-start_address	Start IP address of the static IP pool for the segment network.	string	"192.168.0.51"	no
-end_address	End IP address of the static IP pool for the segment network.	string	"192.168.0.100"	no
-dns1_address	Primary DNS server address for the segment network.	string	"192.168.255.228"	no
-dns2_address	Secondary DNS server address for the segment network.	string	""	no
-dns_suffix	DNS suffix for the segment network.	string	"segment01.local"	no
-Outputs
-Name	Description
-segment_id	ID of the segment network created.
-segment_name	Name of the segment network created.
-segment_gateway	Gateway IP address of the segment network.
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|----------|
+| vdc_group_name | Name of the VDC group | string | n/a | yes |
+| vdc_org_name | Name of the VDC organization | string | n/a | yes |
+| vdc_edge_name | Name of the VDC edge | string | n/a | yes |
+| prefix_length | CIDR notation prefix length for the 24-bit network | string | `"24"` | no |
+| segment_name | Name of the segment routed network | string | `"US1-Segment-01"` | no |
+| segment_gateway | Gateway IP address for the segment routed network | string | `"192.168.0.1"` | no |
+| start_address | Start IP address of the static IP pool for the segment network | string | `"192.168.0.51"` | no |
+| end_address | End IP address of the static IP pool for the segment network | string | `"192.168.0.100"` | no |
+| dns1_address | Primary DNS server address for the segment network | string | `"192.168.255.228"` | no |
+| dns2_address | Secondary DNS server address for the segment network | string | `""` | no |
+| dns_suffix | DNS suffix for the segment network | string | `"segment01.local"` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| segment_network_id | The ID of the segment network |
+| segment_cidr | The CIDR of the segment network |
+| static_ip_pool_id | The ID of the static IP address pool |
+| dns_server_ids | The IDs of the DNS servers |
+| dns_search_suffix | The DNS search suffix |
 Example Usage
 terraform
 Copy code
