@@ -9,18 +9,6 @@ terraform {
   }
 }
 
-# Create the Datacenter Group data source
-data "vcd_vdc_group" "dcgroup" {
-  name = var.vdc_group_name
-}
-
-# Create the NSX-T Edge Gateway data source
-data "vcd_nsxt_edgegateway" "t1" {
-  org      = var.vdc_org_name
-  owner_id = data.vcd_vdc_group.dcgroup.id
-  name     = var.vdc_edge_name
-}
-
 #########################
 # Org VDC Routed Network
 ######################### 
