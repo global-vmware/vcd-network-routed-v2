@@ -31,7 +31,7 @@ resource "vcd_network_routed_v2" "segment" {
   edge_gateway_id = data.vcd_nsxt_edgegateway.t1.id
 
   gateway         = var.segment_gateway
-  prefix_length   = var.vcd_network_routed_prefix_length_24
+  prefix_length   = var.prefix_length
   dns1            = var.dns1_address
   dns2            = var.dns2_address
   dns_suffix      = var.dns_suffix
