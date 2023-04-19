@@ -27,6 +27,7 @@ data "vcd_nsxt_edgegateway" "t1" {
 
 resource "vcd_network_routed_v2" "segment" {
   org             = var.vdc_org_name
+  vdc             = var.vdc_group_name
   name            = var.segment_name
   edge_gateway_id = data.vcd_nsxt_edgegateway.t1.id
 
