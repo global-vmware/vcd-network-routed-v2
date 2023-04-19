@@ -1,30 +1,25 @@
 variable "vdc_group_name" {
   description = "Cloud Director Datacenter Group Name"
-  type = string
   default = null
 }
 
 variable "vdc_org_name" {
   description = "Cloud Director Organization Name"
-  type = string
   default = ""
 }
 
 variable "vdc_edge_name" {
   description = "Cloud Director Edge Name"
-  type = string
   default = ""
 }
 
 variable "vcd_network_routed_prefix_length_24" {
   description = "CIDR notation prefix length for the 24-bit network"
-  type = number
   default = "24"
 }
 
 variable "vcd_network_routed_segment_segment_name" {
   description = "Name of the segment routed network"
-  type = string
   default = ""
 }
 
