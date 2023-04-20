@@ -31,7 +31,7 @@ This Terraform module creates an Org VDC Routed Network in an existing VMware Cl
 <pre>
 ```Terraform Code Example
 module "segment_network" {
-  source = "./modules/segment-network"
+  source = "github.com/global-vmware/vcd-network-routed-v2.git?ref=v1.1.0"
 
   vdc_group_name = "US1-VDC-GRP-01"
   vdc_org_name = "US1-VDC-ORG-01"
