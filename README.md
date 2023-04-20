@@ -30,7 +30,7 @@ This Terraform module creates an Org VDC Routed Network in an existing VMware Cl
 ## Example Usage
 <pre>
 ```Terraform Code Example
-module "segment_network" {
+module "org-vdc-routed-network" {
   source = "github.com/global-vmware/vcd-network-routed-v2.git?ref=v1.1.0"
 
   vdc_group_name = "US1-VDC-GRP-01"
@@ -45,8 +45,8 @@ module "segment_network" {
   start_address = "192.168.50.51"
   end_address = "192.168.50.100"
 
-  dns1_address = "192.168.255.228"
-  dns2_address = ""
+  dns1_address = "192.168.50.10"
+  dns2_address = "192.168.50.11"
   dns_suffix = "segment01.local"
 }
 ```
