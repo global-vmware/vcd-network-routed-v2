@@ -21,11 +21,13 @@ This Terraform module creates an Org VDC Routed Network in an existing VMware Cl
 
 | Name | Description |
 |------|-------------|
-| segment_network_id | The ID of the segment network |
-| segment_cidr | The CIDR of the segment network |
-| static_ip_pool_id | The ID of the static IP address pool |
-| dns_server_ids | The IDs of the DNS servers |
-| dns_search_suffix | The DNS search suffix |
+| network_name | The Name of the network segment |
+| network_gateway | The Gateway Address of the network segment |
+| network_static_ip_pool | The Static IP Pool Start and End Addresses |
+| network_prefix_length | The Prefix Length of the network segment |
+| network_dns1 | The IP Address of the Primary DNS server |
+| network_dns2 | The IP Address of the Secondary DNS server |
+| network_dns_suffix | The DNS search suffix |
 
 ## Example Usage
 <pre>
