@@ -47,7 +47,7 @@ module "org-vdc-routed-network" {
 
   dns1_address = "192.168.50.10"
   dns2_address = "192.168.50.11"
-  dns_suffix = "segment01.local"
+  dns_suffix = "domain.local"
 }
 ```
 </pre>
