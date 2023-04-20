@@ -30,9 +30,11 @@ This Terraform module creates an Org VDC Routed Network in an existing VMware Cl
 | network_dns_suffix | The DNS Search Suffix |
 
 ## Example Usage
-<pre>
-```Terraform Code Example
+This is an example of a main.tf file that would use the "github.com/global-vmware/vcd-network-routed-v2" Module Source to create a Data Center Group Routed Network.
 
+The Terraform code example for the main.tf file is below:
+
+<pre>
 terraform {
   required_providers {
     vcd = {
@@ -61,5 +63,4 @@ module "org-vdc-routed-network" {
   dns2_address = "192.168.50.11"
   dns_suffix = "domain.local"
 }
-```
 </pre>
