@@ -1,5 +1,5 @@
-## Terraform Org VDC Routed Network
-This Terraform module creates an Org VDC Routed Network in an existing VMware Cloud Director (VCD) Environment.  This module is being used to provsion new Data Center Group Organization Networks in the Rackspace SDDC Flex VMware Cloud.
+## VMware Cloud Director Data Center Group Routed Network
+This Terraform module creates a Data Center Group Routed Network in an existing VMware Cloud Director (VCD) Environment.  This module is being used to provsion new Data Center Group Networks into the Rackspace SDDC Flex Data Center Regions.
 
 ## Inputs
 
