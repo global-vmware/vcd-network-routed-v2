@@ -1,5 +1,5 @@
-## Terraform Network Module
-This Terraform module creates a segment routed network in an existing VMware Cloud on AWS (VMC) Software Defined Data Center (SDDC).
+## Terraform Org VDC Routed Network
+This Terraform module creates an Org VDC Routed Network in an existing VMware Cloud Director (VCD) Environment.  This module is being used to provsion new Data Center Group Organization Networks in the Rackspace SDDC Flex VMware Cloud.
 
 ## Inputs
 
