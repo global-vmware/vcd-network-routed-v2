@@ -21,17 +21,27 @@ This Terraform module creates an Org VDC Routed Network in an existing VMware Cl
 
 | Name | Description |
 |------|-------------|
-| network_name | The Name of the network segment |
-| network_gateway | The Gateway Address of the network segment |
+| network_name | The Name of the Data Center Group Routed Network |
+| network_gateway | The Gateway Address of the Data Center Group Routed Network |
 | network_static_ip_pool | The Static IP Pool Start and End Addresses |
-| network_prefix_length | The Prefix Length of the network segment |
-| network_dns1 | The IP Address of the Primary DNS server |
-| network_dns2 | The IP Address of the Secondary DNS server |
-| network_dns_suffix | The DNS search suffix |
+| network_prefix_length | The Prefix Length of the Data Center Group Routed Network |
+| network_dns1 | The IP Address of the Primary DNS Server |
+| network_dns2 | The IP Address of the Secondary DNS Server |
+| network_dns_suffix | The DNS Search Suffix |
 
 ## Example Usage
 <pre>
 ```Terraform Code Example
+
+terraform {
+  required_providers {
+    vcd = {
+      source = "vmware/vcd"
+      version = "3.8.2"
+    }
+  }
+}
+
 module "org-vdc-routed-network" {
   source = "github.com/global-vmware/vcd-network-routed-v2.git?ref=v1.1.0"
 
