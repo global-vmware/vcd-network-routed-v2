@@ -5,17 +5,17 @@ This Terraform module creates an Org VDC Routed Network in an existing VMware Cl
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|----------|
-| vdc_group_name | Name of the VDC group | string | n/a | yes |
-| vdc_org_name | Name of the VDC organization | string | n/a | yes |
-| vdc_edge_name | Name of the VDC edge | string | n/a | yes |
-| prefix_length | CIDR notation prefix length for the 24-bit network | string | `"24"` | no |
-| segment_name | Name of the segment routed network | string | `"US1-Segment-01"` | no |
-| segment_gateway | Gateway IP address for the segment routed network | string | `"192.168.0.1"` | no |
-| start_address | Start IP address of the static IP pool for the segment network | string | `"192.168.0.51"` | no |
-| end_address | End IP address of the static IP pool for the segment network | string | `"192.168.0.100"` | no |
-| dns1_address | Primary DNS server address for the segment network | string | `"192.168.255.228"` | no |
-| dns2_address | Secondary DNS server address for the segment network | string | `""` | no |
-| dns_suffix | DNS suffix for the segment network | string | `"segment01.local"` | no |
+| vdc_group_name | Name of the Data Center Group | string | `"Data Center Group Name Format: <Account_Number>-<Region>-<Account_Name> <datacenter group>"` | yes |
+| vdc_org_name | Name of the Data Center Group Organization | string | `"Data Center Group Name Format: <Account_Number>-<Region>-<Account_Name>"` | yes |
+| vdc_edge_name | Name of the Data Center Group Edge Gateway | string | `"Edge Gateway Name Format: <Account_Number>-<Region>-<Edge_GW_Identifier>-<edge>"` | yes |
+| prefix_length | CIDR notation prefix length for the Data Center Group Routed Network | string | `"24"` | no |
+| segment_name | Name of the Data Center Group Routed Network | string | `"US1-Segment-01"` | no |
+| segment_gateway | Gateway IP address for Data Center Group Routed Network | string | `"192.168.0.1"` | no |
+| start_address | Start IP address of the static IP pool for the Data Center Group Routed Network | string | `"192.168.0.51"` | no |
+| end_address | End IP address of the static IP pool for the Data Center Group Routed Network | string | `"192.168.0.100"` | no |
+| dns1_address | Primary DNS server address for the Data Center Group Routed Network | string | `"192.168.255.228"` | no |
+| dns2_address | Secondary DNS server address for the Data Center Group Routed Network | string | `""` | no |
+| dns_suffix | DNS suffix for the Data Center Group Routed Network | string | `"segment01.local"` | no |
 
 ## Outputs
 
