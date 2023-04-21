@@ -1,5 +1,5 @@
 ## Data Center Group Routed Network Terraform Module
-This Terraform module creates a Data Center Group Routed Network in an existing VMware Cloud Director (VCD) Environment.  This module is being used to provsion new Data Center Group Networks into the Rackspace SDDC Flex Data Center Regions.
+This Terraform module will deploy a Data Center Group Routed Network into an existing VMware Cloud Director (VCD) Environment.  This module can be used to provsion new Data Center Group Networks into Rackspace Technology SDDC Flex VCD Data Center Regions.
 
 ## Requirements
 
