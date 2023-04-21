@@ -21,7 +21,7 @@ variable "segment_gateway" {
 
 variable "start_address" {
   description = "Start IP address of the static IP pool for the segment network"
-  default = "192.168.0.51"
+  default = "192.168.0.50"
 }
 
 variable "end_address" {

@@ -24,7 +24,7 @@ This Terraform module will deploy a Data Center Group Routed Network into an exi
 | prefix_length | CIDR notation prefix length for the Data Center Group Routed Network | string | `"24"` | no |
 | segment_name | Name of the Data Center Group Routed Network | string | `"Segment-01"` | no |
 | segment_gateway | Gateway IP address for Data Center Group Routed Network | string | `"192.168.0.1"` | no |
-| start_address | Start IP address of the static IP pool for the Data Center Group Routed Network | string | `"192.168.0.51"` | no |
+| start_address | Start IP address of the static IP pool for the Data Center Group Routed Network | string | `"192.168.0.50"` | no |
 | end_address | End IP address of the static IP pool for the Data Center Group Routed Network | string | `"192.168.0.100"` | no |
 | dns1_address | Primary DNS server address for the Data Center Group Routed Network | string | `"192.168.255.228"` | no |
 | dns2_address | Secondary DNS server address for the Data Center Group Routed Network | string | `""` | no |
@@ -59,7 +59,7 @@ module "org-vdc-routed-network" {
   segment_gateway     = "192.168.1.1"
   prefix_length       = "24"
 
-  start_address       = "192.168.1.51"
+  start_address       = "192.168.0.50"
   end_address         = "192.168.1.100"
 
   dns1_address        = "192.168.1.10"
