@@ -49,22 +49,21 @@ The Terraform code example for the main.tf file is below:
 
 ```terraform
 module "org-vdc-routed-network" {
-  source = "github.com/global-vmware/vcd-network-routed-v2.git?ref=v1.1.0"
+  source              = "github.com/global-vmware/vcd-network-routed-v2.git?ref=v1.1.0"
 
-  vdc_group_name = "US1-VDC-GRP-NAME"
-  vdc_org_name = "US1-VDC-ORG-NAME"
-  vdc_edge_name = "US1-VDC-EDGE-NAME"
+  vdc_group_name      = "<US1-VDC-GRP-NAME>"
+  vdc_org_name        = "<US1-VDC-ORG-NAME>"
+  vdc_edge_name       = "<US1-VDC-EDGE-NAME>"
 
-  prefix_length = "24"
+  segment_name        = "US1-Segment-01"
+  segment_gateway     = "192.168.50.1"
+  prefix_length       = "24"
 
-  segment_name = "US1-Segment-01"
-  segment_gateway = "192.168.50.1"
+  start_address       = "192.168.50.51"
+  end_address         = "192.168.50.100"
 
-  start_address = "192.168.50.51"
-  end_address = "192.168.50.100"
-
-  dns1_address = "192.168.50.10"
-  dns2_address = "192.168.50.11"
-  dns_suffix = "domain.local"
+  dns1_address        = "192.168.50.10"
+  dns2_address        = "192.168.50.11"
+  dns_suffix          = "domain.local"
 }
 ```
