@@ -51,9 +51,9 @@ The Terraform code example for the main.tf file is below:
 module "org-vdc-routed-network" {
   source = "github.com/global-vmware/vcd-network-routed-v2.git?ref=v1.1.0"
 
-  vdc_group_name = "US1-VDC-GRP-01"
-  vdc_org_name = "US1-VDC-ORG-01"
-  vdc_edge_name = "US1-VDC-EDGE-01"
+  vdc_group_name = "US1-VDC-GRP-NAME"
+  vdc_org_name = "US1-VDC-ORG-NAME"
+  vdc_edge_name = "US1-VDC-EDGE-NAME"
 
   prefix_length = "24"
 
