@@ -11,7 +11,7 @@ variable "prefix_length" {
 
 variable "segment_name" {
   description = "Name of the segment routed network"
-  default = "US1-Segment-01"
+  default = "Segment-01"
 }
 
 variable "segment_gateway" {
@@ -41,5 +41,5 @@ variable "dns2_address" {
 
 variable "dns_suffix" {
   description = "DNS suffix for the segment network"
-  default = "segment01.local"
+  default = "domain.local"
 }
