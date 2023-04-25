@@ -24,7 +24,7 @@ This Terraform module will deploy a Data Center Group Routed Network into an exi
 | segments | A map of objects defining the segments to be created. | map(object({<br>  gateway = string,<br>  prefix_length = number,<br>  dns1 = string,<br>  dns2 = string,<br>  dns_suffix = string,<br>  start_address = string,<br>  end_address = string<br>})) | `{Segment-01 = {gateway = "192.168.0.1", prefix_length = 24, dns1 = "192.168.255.228", dns2 = "", dns_suffix = "domain.com", start_address = "192.168.0.50", end_address = "192.168.0.100"}, Segment-02 = {gateway = "192.168.1.1", prefix_length = 24, dns1 = "192.168.255.228", dns2 = "", dns_suffix = "domain.com", start_address = "192.168.1.50", end_address = "192.168.1.100"}}` | no |
 
 
-`NOTE:`Each object in the segments map must have the following attributes:
+`NOTE:`Each object in the `segments` map must have the following attributes:
 
 `gateway`: The gateway IP address for the segment.
 `prefix_length`: The CIDR notation prefix length for the segment.
