@@ -21,7 +21,8 @@ This Terraform module will deploy a Data Center Group Routed Network into an exi
 | vdc_group_name | Name of the Data Center Group | string | `"Data Center Group Name Format: <Account_Number>-<Region>-<Account_Name> <datacenter group>"` | yes |
 | vdc_org_name | Name of the Data Center Group Organization | string | `"Data Center Group Name Format: <Account_Number>-<Region>-<Account_Name>"` | yes |
 | vdc_edge_name | Name of the Data Center Group Edge Gateway | string | `"Edge Gateway Name Format: <Account_Number>-<Region>-<Edge_GW_Identifier>-<edge>"` | yes |
-| segments | A map of objects defining the segments to be created. | map(object({<br>  gateway = string,<br>  prefix_length = number,<br>  start_address = string,<br>  end_address = string,<br>  dns1_address = string,<br>  dns2_address = string,<br>  dns_suffix = string<br>})) | null | yes |
+| segments | A map of objects defining the segments to be created. | map(object({<br>  gateway = string,<br>  prefix_length = number,<br>  dns1 = string,<br>  dns2 = string,<br>  dns_suffix = string,<br>  start_address = string,<br>  end_address = string<br>})) | `{Segment-01 = {gateway = "192.168.0.1", prefix_length = 24, dns1 = "192.168.255.228", dns2 = "", dns_suffix = "domain.com", start_address = "192.168.0.50", end_address = "192.168.0.100"}, Segment-02 = {gateway = "192.168.1.1", prefix_length = 24, dns1 = "192.168.255.228", dns2 = "", dns_suffix = "domain.com", start_address = "192.168.1.50", end_address = "192.168.1.100"}}` | no |
+
 
 `NOTE:`Each object in the segments map must have the following attributes:
 
