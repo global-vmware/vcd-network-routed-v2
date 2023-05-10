@@ -13,6 +13,8 @@ This Terraform module will deploy a Data Center Group Routed Network into an exi
 
 | Name | Type |
 |------|------|
+| [vcd_vdc_group](https://registry.terraform.io/providers/vmware/vcd/3.8.2/docs/data-sources/vdc_group) | data source |
+| [vcd_nsxt_edgegateway](https://registry.terraform.io/providers/vmware/vcd/3.8.2/docs/data-sources/nsxt_edgegateway) | data source |
 | [vcd_network_routed_v2](https://registry.terraform.io/providers/vmware/vcd/3.8.2/docs/resources/network_routed_v2) | resource |
 
 ## Inputs
