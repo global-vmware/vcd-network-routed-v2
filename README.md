@@ -6,8 +6,8 @@ This Terraform module will deploy a Data Center Group Routed Network into an exi
 
 | Name | Version |
 |------|---------|
-| terraform | >= 1.2 |
-| vcd | >= 3.8.2 |
+| terraform | ~> 1.2 |
+| vcd | ~> 3.8.2 |
 
 ## Resources
 
