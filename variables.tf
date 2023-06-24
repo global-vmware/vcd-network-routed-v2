@@ -15,24 +15,4 @@ variable "segments" {
     start_address   = string
     end_address     = string
   }))
-  default = {
-    Segment-01 = {
-      gateway         = "192.168.0.1"
-      prefix_length   = 24
-      dns1            = "192.168.255.228"
-      dns2            = ""
-      dns_suffix      = "domain.com"
-      start_address   = "192.168.0.50"
-      end_address     = "192.168.0.100"
-    },
-    Segment-02 = {
-      gateway         = "192.168.1.1"
-      prefix_length   = 24
-      dns1            = "192.168.255.228"
-      dns2            = ""
-      dns_suffix      = "domain.com"
-      start_address   = "192.168.1.50"
-      end_address     = "192.168.1.100"
-    }
-  }
 }
