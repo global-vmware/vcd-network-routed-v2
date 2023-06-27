@@ -21,10 +21,6 @@ data "vcd_nsxt_edgegateway" "t1" {
   name     = var.vdc_edge_name
 }
 
-#########################
-# Org VDC Routed Network
-######################### 
-
 resource "vcd_network_routed_v2" "org_vdc_routed_network" {
   for_each        = var.segments
   org             = var.vdc_org_name
@@ -37,8 +33,12 @@ resource "vcd_network_routed_v2" "org_vdc_routed_network" {
   dns2            = each.value.dns2
   dns_suffix      = each.value.dns_suffix
 
-  static_ip_pool {
-    start_address = each.value.start_address
-    end_address   = each.value.end_address
+  dynamic "static_ip_pool" {
+    for_each = each.value.pool_ranges
+    content {
+      start_address = static_ip_pool.value.start_address
+      end_address   = static_ip_pool.value.end_address
+    }
   }
 }
+

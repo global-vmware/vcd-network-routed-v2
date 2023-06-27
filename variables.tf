@@ -12,7 +12,9 @@ variable "segments" {
     dns1            = string
     dns2            = string
     dns_suffix      = string
-    start_address   = string
-    end_address     = string
+    pool_ranges     = list(object({
+      start_address = string
+      end_address   = string
+    }))
   }))
 }
