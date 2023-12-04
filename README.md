@@ -68,8 +68,8 @@ module "org_vdc_routed_network" {
       dns_suffix    = "mydomain.com"
       pool_ranges   = [
         {
-          start_address = "192.168.1.10"
-          end_address   = "192.168.1.20"
+          start_address = "192.168.1.50"
+          end_address   = "192.168.1.100"
         }
       ]
     }
