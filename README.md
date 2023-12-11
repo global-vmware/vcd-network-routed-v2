@@ -1,6 +1,6 @@
 ## Data Center Group Routed Network Terraform Module
 
-This Terraform module will deploy a Data Center Group Routed Network into an existing VMware Cloud Director (VCD) Environment.  This module can be used to provsion new Data Center Group Networks into [Rackspace Technology SDDC Flex](https://www.rackspace.com/cloud/private/software-defined-data-center-flex) VCD Data Center Regions.
+This Terraform module will deploy a Data Center Group Routed Network into an existing VMware Cloud Director (VCD) Environment.  This module can be used to provision new Data Center Group Networks into [Rackspace Technology SDDC Flex](https://www.rackspace.com/cloud/private/software-defined-data-center-flex) VCD Data Center Regions.
 
 ## Requirements
 
@@ -40,7 +40,7 @@ Here's an example of how to use this module in a `main.tf` file:
 
 ```terraform
 module "org_vdc_routed_network" {
-  source          = "github.com/global-vmware/vcd_network_routed_v2.git?ref=v2.0.0"
+  source          = "github.com/global-vmware/vcd_network_routed_v2.git?ref=v2.0.1"
   
   vdc_group_name      = "<US1-VDC-GRP-NAME>"
   vdc_org_name        = "<US1-VDC-ORG-NAME>"
