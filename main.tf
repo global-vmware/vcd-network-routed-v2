@@ -23,8 +23,8 @@ data "vcd_nsxt_edgegateway" "t1" {
 }
 
 resource "vcd_network_routed_v2" "org_vdc_routed_network" {
-  for_each        = var.segments
   org             = var.vdc_org_name
+  for_each        = var.segments
   name            = each.key
   edge_gateway_id = data.vcd_nsxt_edgegateway.t1.id
 
